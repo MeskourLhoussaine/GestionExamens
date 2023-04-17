@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter(value = AccessLevel.PUBLIC)
 @Setter(value = AccessLevel.PUBLIC)
-
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
