@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter(value = AccessLevel.PUBLIC)
 @Setter(value = AccessLevel.PUBLIC)
-//classe prof
+//classe profeseur
 public class Professeur extends User{
 	@Column(nullable = false, length = 25)
 	private String specialite;
