@@ -1,15 +1,27 @@
 package ma.projet.beans.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.Date;
+
 @Entity
+@Table(name = "salles")
+@NoArgsConstructor
+@Getter(value = AccessLevel.PUBLIC)
+@Setter(value = AccessLevel.PUBLIC)
 public class Examen {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id ;
 	private String nomModule;
-    private String dure;
+
+	@Temporal(TemporalType.DATE)
+	@Column(nullable = false)
+	private Date date;
+    private String duree;
 
 }
