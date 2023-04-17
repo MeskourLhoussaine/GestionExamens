@@ -1,22 +1,25 @@
 package ma.projet.beans.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
-@Table(name = "surveillants")
+@Table(name = "salles")
 @NoArgsConstructor
 @Getter(value = AccessLevel.PUBLIC)
 @Setter(value = AccessLevel.PUBLIC)
-public class Surveillant extends User{
-
-    @ManyToOne
+public class Salle {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @OneToMany(mappedBy = "salles")
     @JsonIgnore
-    private Admin admin;
+    private List<Surveillant> surveillants;
+
 }
