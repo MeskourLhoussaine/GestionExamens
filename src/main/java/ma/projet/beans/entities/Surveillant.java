@@ -19,4 +19,10 @@ public class Surveillant extends User{
     @ManyToOne
     @JsonIgnore
     private Admin admin;
+
+    @ManyToOne
+    @JsonIgnore
+    private Salle salle;
+
+
 }

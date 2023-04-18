@@ -18,7 +18,7 @@ public class Salle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @OneToMany(mappedBy = "salles")
+    @OneToMany(mappedBy = "salle")
     @JsonIgnore
     private List<Surveillant> surveillants;
 
