@@ -19,9 +19,9 @@ public class Examen {
 	private int id ;
 	private String nomModule;
 
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIME)
 	@Column(nullable = false)
-	private Date date;
+	private Date heure;
     private String duree;
 
 }

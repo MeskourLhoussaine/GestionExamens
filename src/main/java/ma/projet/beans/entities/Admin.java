@@ -20,7 +20,7 @@ public class Admin {
 	private int id;
 	@Column(nullable = false, length = 25)
 	private String role;
-	@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy = "Admin")
 	@JsonIgnore
 	private List<User> users;
 
