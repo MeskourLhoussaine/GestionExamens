@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "examens")
@@ -27,5 +28,16 @@ public class Examen {
 	@ManyToOne
 	@JsonIgnore
 	private Salle salle;
+	@OneToMany(mappedBy = "examen")
+	@JsonIgnore
+	private List<PvExamen>pvExamens;
+
+	@OneToMany(mappedBy = "examen")
+	@JsonIgnore
+	private List<Fraude> fraudes;
+	@OneToOne(mappedBy = "examen",cascade = CascadeType.ALL)
+	private PasserExamen passerExamen;
+
+
 
 }

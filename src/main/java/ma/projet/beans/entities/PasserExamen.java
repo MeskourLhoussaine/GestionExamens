@@ -9,25 +9,31 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
+
 @Entity
-@Table(name = "pvExamens")
+@Table(name = "passerExamens")
 @NoArgsConstructor
 @Getter(value = AccessLevel.PUBLIC)
 @Setter(value = AccessLevel.PUBLIC)
-public class PvExamen {
+public class PasserExamen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String Num_Apo;
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private Date date;
-    @ManyToOne
+    private Date dateDebut;
+    @Temporal(TemporalType.DATE)
+    @Column(nullable = false)
+    private Date dateFin;
+    @ManyToMany(fetch = FetchType.EAGER)
     @JsonIgnore
+    private List<Etudiant>etudiants;
+    @OneToOne
+    @JoinColumn(name = "examen_id", referencedColumnName = "id")
     private Examen examen;
-    @ManyToOne
-    @JsonIgnore
-    private Etudiant etudiant;
+
+
 
 
 }

@@ -1,10 +1,14 @@
 package ma.projet.beans.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
+
 @Entity
 @Table(name = "semesters")
 @NoArgsConstructor
@@ -15,5 +19,11 @@ public class Semester {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nom_s;
+    @OneToMany(mappedBy = "semester")
+    @JsonIgnore
+    private List<Module>modules;
+   @OneToMany(mappedBy = "semester")
+    @JsonIgnore
+    private List<Filiere> filieres;
 
 }

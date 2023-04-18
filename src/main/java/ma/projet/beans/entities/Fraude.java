@@ -1,10 +1,15 @@
 package ma.projet.beans.entities;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+
+import java.util.List;
 
 @Entity
 @Table(name = "fraudes")
@@ -14,6 +19,12 @@ import lombok.Setter;
 public class Fraude {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String type;
-
+    @OneToMany(mappedBy = "fraude")
+    @JsonIgnore
+    private List<Etudiant> etudiants;
+    @ManyToOne
+    @JsonIgnore
+    private Examen examen;
 }
