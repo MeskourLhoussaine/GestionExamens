@@ -24,6 +24,6 @@ public class Admin {
 	@JsonIgnore
 	private List<User> users;
 
-	private String maison;
+	
 
 }
