@@ -9,7 +9,7 @@ import lombok.Setter;
 
 import java.util.Date;
 @Entity
-@Table(name = "modules")
+@Table(name = "pvExamens")
 @NoArgsConstructor
 @Getter(value = AccessLevel.PUBLIC)
 @Setter(value = AccessLevel.PUBLIC)
