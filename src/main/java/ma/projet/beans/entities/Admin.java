@@ -10,7 +10,7 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@Table(name = "users")
+@Table(name = "admine")
 @NoArgsConstructor
 @Getter(value = AccessLevel.PUBLIC)
 @Setter(value = AccessLevel.PUBLIC)
@@ -20,7 +20,7 @@ public class Admin {
 	private int id;
 	@Column(nullable = false, length = 25)
 	private String role;
-	@OneToMany(mappedBy = "Admin")
+	@OneToMany(mappedBy = "admin")
 	@JsonIgnore
 	private List<User> users;
 
