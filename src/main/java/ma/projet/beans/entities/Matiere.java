@@ -1,6 +1,7 @@
 package ma.projet.beans.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -17,5 +18,8 @@ public class Matiere {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nom_m;
+    @ManyToOne
+    @JsonIgnore
+    private Professeur professeur;
 
 }

@@ -22,4 +22,8 @@ public class Salle {
     @JsonIgnore
     private List<Surveillant> surveillants;
 
+    @OneToMany(mappedBy = "salle")
+    @JsonIgnore
+    private List<Examen> Examens;
+
 }

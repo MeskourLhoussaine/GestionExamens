@@ -1,5 +1,6 @@
 package ma.projet.beans.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -23,5 +24,8 @@ public class Examen {
 	@Column(nullable = false)
 	private Date heure;
     private String duree;
+	@ManyToOne
+	@JsonIgnore
+	private Salle salle;
 
 }
