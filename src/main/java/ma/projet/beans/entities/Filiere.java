@@ -19,7 +19,8 @@ public class Filiere {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String nom;
+    @Column(nullable = false, length = 30)
+    private String nom_f;
     @ManyToOne
     @JsonIgnore
     private Semester  semester;

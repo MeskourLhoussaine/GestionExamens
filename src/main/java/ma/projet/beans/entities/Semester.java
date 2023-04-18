@@ -18,6 +18,7 @@ public class Semester {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(nullable = false, length = 25)
     private String nom_s;
     @OneToMany(mappedBy = "semester")
     @JsonIgnore

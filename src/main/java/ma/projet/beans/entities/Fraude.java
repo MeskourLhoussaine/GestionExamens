@@ -20,6 +20,7 @@ public class Fraude {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(nullable = false, length = 25)
     private String type;
     @OneToMany(mappedBy = "fraude")
     @JsonIgnore

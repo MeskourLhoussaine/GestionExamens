@@ -19,6 +19,7 @@ public class Examen {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id ;
+	@Column(nullable = false, length = 25)
 	private String nomModule;
 
 	@Temporal(TemporalType.TIME)
