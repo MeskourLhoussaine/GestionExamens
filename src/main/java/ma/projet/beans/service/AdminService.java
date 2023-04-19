@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 @Transactional
 @AllArgsConstructor
+//jscs
 public class AdminService implements IAdmin {
     private AdminRepository adminRepository;
     @Override
