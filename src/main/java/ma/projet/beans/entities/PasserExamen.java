@@ -26,9 +26,9 @@ public class PasserExamen {
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
     private Date dateFin;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToOne
     @JsonIgnore
-    private List<Etudiant>etudiants;
+    private Etudiant etudiant;
     @OneToOne
     @JoinColumn(name = "examen_id", referencedColumnName = "id")
     private Examen examen;
