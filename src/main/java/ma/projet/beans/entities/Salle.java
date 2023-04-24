@@ -18,7 +18,7 @@ public class Salle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+    private String type;
     private int capacite;
     @OneToMany(mappedBy = "salle")
     @JsonIgnore
