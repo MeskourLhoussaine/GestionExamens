@@ -12,7 +12,6 @@ import java.util.List;
 @Service
 @Transactional
 @AllArgsConstructor
-
 public class AdminService implements IAdmin {
     private AdminRepository adminRepository;
     @Override
@@ -28,7 +27,7 @@ public class AdminService implements IAdmin {
 
     @Override
     public Admin findById(int id) {
-        return this.adminRepository.findBy(id);
+        return this.adminRepository.findById(id);
     }
 
     @Override

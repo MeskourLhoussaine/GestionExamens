@@ -41,8 +41,5 @@ public class EtudiantService implements IEtudiant {
 		return this.etudiantRepository.findAll();
 	}
 
-	@Override
-	public Etudiant findEtudiantByNum_Apo(int Num_Apo) {
-		return this.etudiantRepository.findEtudiantByNum_Apo(Num_Apo);
-	}
+
 }
