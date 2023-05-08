@@ -5,5 +5,4 @@ import ma.projet.beans.idao.IDao;
 
 public interface IEtudiant extends IDao<Etudiant> {
 
-	
 }
