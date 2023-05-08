@@ -1,5 +1,53 @@
 package ma.projet.beans.service;
 
-public class SurveillantService {
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import jakarta.transaction.Transactional;
+import lombok.AllArgsConstructor;
+import ma.projet.beans.entities.Surveillant;
+import ma.projet.beans.iservice.ISurveillant;
+import ma.projet.beans.repository.SurveillantRepository;
+@Service
+@Transactional
+@AllArgsConstructor
+public class SurveillantService implements ISurveillant {
+   private SurveillantRepository surveillantRepository;
+	@Override
+	public Surveillant save(Surveillant object) {
+		// TODO Auto-generated method stub
+		return surveillantRepository.save(object);
+	}
+
+	@Override
+	public void delete(Surveillant object) {
+		// TODO Auto-generated method stub
+		surveillantRepository.delete(object);
+	}
+
+	@Override
+	public Surveillant findById(int id) {
+		// TODO Auto-generated method stub
+		return surveillantRepository.findById(id);
+	}
+
+	@Override
+	public List<Surveillant> findAll() {
+		// TODO Auto-generated method stub
+		return surveillantRepository.findAll();
+	}
+
+	@Override
+	public Surveillant update(Surveillant p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

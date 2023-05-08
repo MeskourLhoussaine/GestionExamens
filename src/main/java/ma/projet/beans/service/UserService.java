@@ -8,7 +8,6 @@ import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.User;
 import ma.projet.beans.iservice.IUser;
-import ma.projet.beans.repository.AdminRepository;
 import ma.projet.beans.repository.UserRepository;
 
 @Service
@@ -39,6 +38,18 @@ public class UserService implements IUser{
 	public List<User> findAll() {
 		// TODO Auto-generated method stub
 		return userRepository.findAll();
+	}
+
+	@Override
+	public User update(User p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

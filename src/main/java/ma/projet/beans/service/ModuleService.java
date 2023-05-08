@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import ma.projet.beans.iservice.IModule;
-import ma.projet.beans.repository.EtudiantRepository;
 import ma.projet.beans.repository.ModuleRepository;
 @Service
 @Transactional
@@ -36,6 +35,18 @@ public class ModuleService implements IModule{
 	public List<Module> findAll() {
 		// TODO Auto-generated method stub
 		return moduleRepository.findAll();
+	}
+
+	@Override
+	public Module update(Module p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

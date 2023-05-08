@@ -8,7 +8,6 @@ import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Matiere;
 import ma.projet.beans.iservice.IMatiere;
-import ma.projet.beans.repository.EtudiantRepository;
 import ma.projet.beans.repository.MatiereRepository;
 
 
@@ -39,6 +38,18 @@ public class MatierService implements IMatiere {
 	public List<Matiere> findAll() {
 		// TODO Auto-generated method stub
 		return matiereRepository.findAll();
+	}
+
+	@Override
+	public Matiere update(Matiere p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

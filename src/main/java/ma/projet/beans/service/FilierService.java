@@ -8,7 +8,6 @@ import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Filiere;
 import ma.projet.beans.iservice.IFiliere;
-import ma.projet.beans.repository.EtudiantRepository;
 import ma.projet.beans.repository.FilierRepository;
 @Service
 @Transactional
@@ -37,6 +36,18 @@ public class FilierService implements IFiliere {
 	public List<Filiere> findAll() {
 		// TODO Auto-generated method stub
 		return filierRepository.findAll();
+	}
+
+	@Override
+	public Filiere update(Filiere p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

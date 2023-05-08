@@ -33,4 +33,16 @@ public class ProfesseurService implements IProfesseur {
     public List<Professeur> findAll() {
         return this.professeurRepository.findAll();
     }
+
+	@Override
+	public Professeur update(Professeur p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
 }

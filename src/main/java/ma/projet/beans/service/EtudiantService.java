@@ -41,5 +41,17 @@ public class EtudiantService implements IEtudiant {
 		return this.etudiantRepository.findAll();
 	}
 
+	@Override
+	public Etudiant update(Etudiant p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

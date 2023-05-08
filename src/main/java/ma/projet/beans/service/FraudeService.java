@@ -32,4 +32,16 @@ public class FraudeService implements IFraud{
 		return fraudeRepository.findAll();
 	}
 
+	@Override
+	public Fraude update(Fraude p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

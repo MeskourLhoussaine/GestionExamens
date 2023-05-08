@@ -4,7 +4,6 @@ import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Examen;
 import ma.projet.beans.iservice.IExamen;
-import ma.projet.beans.repository.EtudiantRepository;
 import ma.projet.beans.repository.ExamenRepository;
 import org.springframework.stereotype.Service;
 
@@ -35,4 +34,16 @@ private ExamenRepository examenRepository;
     public List<Examen> findAll() {
         return this.examenRepository.findAll();
     }
+
+	@Override
+	public Examen update(Examen p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
 }

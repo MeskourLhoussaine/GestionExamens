@@ -1,7 +1,6 @@
 package ma.projet.beans.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -9,7 +8,7 @@ import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Departement;
 import ma.projet.beans.iservice.IDepartement;
-import ma.projet.beans.repository.AdminRepository;
+
 import ma.projet.beans.repository.DepartementRepository;
 
 @Service
@@ -41,6 +40,18 @@ public class DepartementService implements IDepartement{
 	public List<Departement> findAll() {
 		// TODO Auto-generated method stub
 		return departementRepository.findAll();
+	}
+
+	@Override
+	public Departement update(Departement p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
