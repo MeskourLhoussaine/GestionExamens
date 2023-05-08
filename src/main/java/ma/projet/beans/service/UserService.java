@@ -43,7 +43,7 @@ public class UserService implements IUser{
 	@Override
 	public User update(User p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.userRepository.save(p);
 	}
 
 	@Override

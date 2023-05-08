@@ -35,14 +35,15 @@ public class AdminService implements IAdmin {
         return this.adminRepository.findAll();
     }
 
-	@Override
-	public Admin update(Admin p) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public Admin update(Admin p) {
+        return this.adminRepository.save(p);
+    }
 
-	@Override
-	public void delete(int id) {
-		// TODO Auto-generated method stub
-	}
+    @Override
+    public void delete(int id) {
+    this.adminRepository.deleteById(id);
+    }
+
+
 }

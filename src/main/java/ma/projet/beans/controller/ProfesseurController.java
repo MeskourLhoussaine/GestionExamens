@@ -1,9 +1,10 @@
 package ma.projet.beans.controller;
 
+
 import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
-import ma.projet.beans.entities.Examen;
-import ma.projet.beans.service.ExamenService;
+import ma.projet.beans.entities.Professeur;
+import ma.projet.beans.service.ProfesseurService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,16 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/examens")
+@RequestMapping("api/professeures")
 @AllArgsConstructor
-public class ExamenController {
-    private ExamenService examenService;
+public class ProfesseurController {
+    private ProfesseurService professeurService;
     @GetMapping(value = "/{id}")
-    public Examen findById(@PathParam(value = "id")int id) {
-        return examenService.findById(id);
+    public Professeur findById(@PathParam(value = "id")int id) {
+        return professeurService.findById(id);
     }
     @GetMapping(value = "/")
-    public List<Examen> findAll() {
-        return examenService.findAll();
+    public List<Professeur> findAll() {
+        return professeurService.findAll();
     }
 }

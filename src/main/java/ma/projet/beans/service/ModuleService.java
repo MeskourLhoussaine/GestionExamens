@@ -13,40 +13,36 @@ import ma.projet.beans.repository.ModuleRepository;
 @AllArgsConstructor
 public class ModuleService implements IModule{
     private ModuleRepository moduleRepository;
+
+
 	@Override
 	public Module save(Module object) {
-		// TODO Auto-generated method stub
-		return moduleRepository.save(object);
+		return this.moduleRepository.save(object);
 	}
 
 	@Override
 	public void delete(Module object) {
-		// TODO Auto-generated method stub
-		moduleRepository.delete(object);
+		this.moduleRepository.delete(object);
+
 	}
 
 	@Override
 	public Module findById(int id) {
-		// TODO Auto-generated method stub
-		return moduleRepository.findById(id);
+		return this.moduleRepository.findById(id);
 	}
 
 	@Override
 	public List<Module> findAll() {
-		// TODO Auto-generated method stub
-		return moduleRepository.findAll();
+		return this.moduleRepository.findAll();
 	}
 
 	@Override
 	public Module update(Module p) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.moduleRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
-		
+     this.moduleRepository.deleteById(id);
 	}
-
 }

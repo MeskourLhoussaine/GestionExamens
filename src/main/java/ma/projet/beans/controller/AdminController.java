@@ -27,7 +27,7 @@ private AdminService adminService;
     public void delete(@RequestBody Admin object) {
         adminService.delete(object);
     }
-    @GetMapping(value = "/findById")
+    @GetMapping(value = "/{id}")
     public Admin findById(@PathParam(value = "id")int id) {
         return adminService.findById(id);
     }
