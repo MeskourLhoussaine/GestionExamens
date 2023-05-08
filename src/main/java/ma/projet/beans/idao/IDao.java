@@ -10,4 +10,6 @@ public interface IDao <T>{
     public T findById(int id);
 
     public List<T> findAll();
+    public T update(T p);
+    void delete(int id);
 }

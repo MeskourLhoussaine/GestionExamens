@@ -14,12 +14,17 @@ import java.util.List;
 @AllArgsConstructor
 public class AdminController {
 private AdminService adminService;
-    @PostMapping(value = { "/save", "/update" })
-    public Admin save(Admin object) {
+    @PostMapping(value = { "/save"})
+    public Admin save( @RequestBody Admin object) {
         return adminService.save(object);
     }
+    @PostMapping(value = { "/update"})
+    public Admin update(@RequestBody Admin p) {
+        return adminService.update(p);
+    }
+
     @DeleteMapping(value = "/delete")
-    public void delete(Admin object) {
+    public void delete(@RequestBody Admin object) {
         adminService.delete(object);
     }
     @GetMapping(value = "/findById")

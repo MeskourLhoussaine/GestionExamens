@@ -13,15 +13,24 @@ import java.util.List;
 @AllArgsConstructor
 public class EtudiantController {
     private EtudiantService etudiantService;
-    @PostMapping(value = { "/save", "/update" })
-    public Etudiant save(Etudiant object) {
+    @PostMapping(value = "/save")
+    public Etudiant save(@RequestBody Etudiant object) {
         return etudiantService.save(object);
     }
+    @PostMapping(value = "/update")
+    public Etudiant update(@RequestBody Etudiant p) {
+        return etudiantService.update(p);
+    }
+    @GetMapping(value = "/{id}")
+    public void delete(@PathParam(value = "id")int id) {
+        etudiantService.delete(id);
+    }
+
     @DeleteMapping(value = "/delete")
     public void delete(Etudiant object) {
         etudiantService.delete(object);
     }
-    @GetMapping(value = "/findById")
+    @GetMapping(value = "/{id}")
     public Etudiant findById(@PathParam(value = "id")int id) {
         return etudiantService.findById(id);
     }
