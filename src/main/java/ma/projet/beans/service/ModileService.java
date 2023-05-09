@@ -13,10 +13,9 @@ import ma.projet.beans.iservice.IModule;
 @Service
 @Transactional
 @AllArgsConstructor
-public class ModileService implements IModule{
+public class ModileService implements IModule {
 
-    private ModileRepository modileRepository;
-
+	private ModileRepository modileRepository;
 
 	@Override
 	public Modile save(Modile object) {
@@ -45,6 +44,6 @@ public class ModileService implements IModule{
 
 	@Override
 	public void delete(int id) {
-
+		this.modileRepository.deleteById(id);
 	}
 }

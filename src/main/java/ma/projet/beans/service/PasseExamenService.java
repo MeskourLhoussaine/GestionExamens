@@ -43,12 +43,13 @@ public class PasseExamenService implements IPasserExamen {
 	@Override
 	public PasserExamen update(PasserExamen p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.passerExamenRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
+		this.passerExamenRepository.deleteById(id);
 		
 	}
 

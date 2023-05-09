@@ -43,12 +43,13 @@ public class MatierService implements IMatiere {
 	@Override
 	public Matiere update(Matiere p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.matiereRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
+		this.matiereRepository.deleteById(id);
 		
 	}
 

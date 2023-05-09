@@ -41,12 +41,13 @@ public class SurveillantService implements ISurveillant {
 	@Override
 	public Surveillant update(Surveillant p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.surveillantRepository.save(null);
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
+		this.surveillantRepository.deleteById(id);
 		
 	}
 

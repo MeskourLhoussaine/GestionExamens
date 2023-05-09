@@ -41,12 +41,13 @@ public class SemesterService implements ISemester {
 	@Override
 	public Semester update(Semester p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.semesterRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
+		this.semesterRepository.deleteById(id);
 		
 	}
 

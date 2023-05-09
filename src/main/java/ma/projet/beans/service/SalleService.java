@@ -47,12 +47,13 @@ public class SalleService  implements ISalle{
 	@Override
 	public Salle update(Salle p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.salleRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
+		this.salleRepository.deleteById(id);
 		
 	}
 

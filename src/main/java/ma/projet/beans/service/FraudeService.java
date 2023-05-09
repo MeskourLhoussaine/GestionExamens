@@ -41,12 +41,13 @@ public class FraudeService implements IFraud{
 	@Override
 	public Fraude update(Fraude p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.fraudeRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
+		this.fraudeRepository.deleteById(id);
 		
 	}
 
