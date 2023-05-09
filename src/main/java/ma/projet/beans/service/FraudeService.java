@@ -2,10 +2,16 @@ package ma.projet.beans.service;
 
 import java.util.List;
 
+import jakarta.transaction.Transactional;
+import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Fraude;
 import ma.projet.beans.iservice.IFraud;
 import ma.projet.beans.repository.FraudeRepository;
+import org.springframework.stereotype.Service;
 
+@Service
+@Transactional
+@AllArgsConstructor
 public class FraudeService implements IFraud{
     private FraudeRepository fraudeRepository;
 	@Override

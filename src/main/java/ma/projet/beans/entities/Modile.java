@@ -14,13 +14,13 @@ import java.util.List;
 @NoArgsConstructor
 @Getter(value = AccessLevel.PUBLIC)
 @Setter(value = AccessLevel.PUBLIC)
-public class Module {
+public class Modile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(nullable = false, length = 25)
     private String nom;
-    @OneToMany(mappedBy = "module")
+    @OneToMany(mappedBy = "modile")
     @JsonIgnore
     public List<Matiere> matieres;
     @ManyToOne

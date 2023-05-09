@@ -22,7 +22,7 @@ public class Semester {
     private String nom_s;
     @OneToMany(mappedBy = "semester")
     @JsonIgnore
-    private List<Module>modules;
+    private List<Modile>modiles;
    @OneToMany(mappedBy = "semester")
     @JsonIgnore
     private List<Filiere> filieres;

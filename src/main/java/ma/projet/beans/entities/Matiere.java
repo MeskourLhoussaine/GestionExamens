@@ -24,7 +24,7 @@ public class Matiere {
     private Professeur professeur;
     @ManyToOne
     @JsonIgnore
-    private Module module;
+    private Modile modile;
 
 
 }

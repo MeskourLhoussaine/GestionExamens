@@ -12,29 +12,35 @@ import java.util.List;
 @RequestMapping("api/users")
 @AllArgsConstructor
 public class UserController {
-    private UserService userService;
-    @PostMapping(value = { "/save"})
-    public User save(User object) {
-        return userService.save(object);
-    }
+	private UserService userService;
 
-    public void delete(User object) {
-        userService.delete(object);
-    }
-    @GetMapping(value = "/{id}")
-    public User findById(@PathParam(value = "id")int id) {
-        return userService.findById(id);
-    }
-    @GetMapping(value = "/")
-    public List<User> findAll() {
-        return userService.findAll();
-    }
-    @PostMapping(value = { "/update"})
-    public User update(User p) {
-        return userService.update(p);
-    }
-    @DeleteMapping(value = "/{id}")
-    public void delete(@PathParam(value = "id")int id) {
-        userService.delete(id);
-    }
+	@PostMapping(value = { "/save" })
+	public User save(User object) {
+		return userService.update(object);
+	}
+
+	@DeleteMapping(value = "/delete")
+	public void delete(@RequestBody User object) {
+		userService.delete(object);
+	}
+
+	@GetMapping(value = "/{id}")
+	public User findById(@PathParam(value = "id") int id) {
+		return userService.findById(id);
+	}
+
+	@GetMapping(value = "/")
+	public List<User> findAll() {
+		return userService.findAll();
+	}
+
+	@PostMapping(value =  "/update" )
+	public User update(User p) {
+		return userService.update(p);
+	}
+
+	@DeleteMapping(value = "/{id}")
+	public void delete(@PathParam(value = "id") int id) {
+		userService.delete(id);
+	}
 }

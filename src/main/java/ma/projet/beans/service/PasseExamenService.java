@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import java.util.List;
 
+import ma.projet.beans.entities.Examen;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -51,4 +52,9 @@ public class PasseExamenService implements IPasserExamen {
 		
 	}
 
+
+	@Override
+	public List<PasserExamen>findByExamen(Examen exam) {
+		return this.passerExamenRepository.findByExamen(exam);
+	}
 }

@@ -2,8 +2,8 @@ package ma.projet.beans.controller;
 
 import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
-import ma.projet.beans.entities.PvExamen;
-import ma.projet.beans.service.PvExamenService;
+import ma.projet.beans.entities.Modile;
+import ma.projet.beans.service.ModileService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,34 +15,38 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/pvExamens")
+@RequestMapping("api/modiles")
 @AllArgsConstructor
-public class PvExamenController {
-	private PvExamenService pvExamenService;
+public class ModileController {
+	private ModileService modileService;
 
 	@GetMapping(value = "/{id}")
-	public PvExamen findById(@PathParam(value = "id") int id) {
-		return pvExamenService.findById(id);
+	public Modile findById(@PathParam(value = "id") int id) {
+		return modileService.findById(id);
 	}
 
 	@GetMapping(value = "/")
-	public List<PvExamen> findAll() {
-		return pvExamenService.findAll();
+	public List<Modile> findAll() {
+		return modileService.findAll();
 	}
+
 	@PostMapping(value = "/save")
-	public PvExamen save(@RequestBody PvExamen object) {
-		return pvExamenService.save(object);
+	public Modile save(@RequestBody Modile object) {
+		return modileService.save(object);
 	}
+
 	@DeleteMapping(value = "/delete")
-	public void delete(@RequestBody PvExamen object) {
-		pvExamenService.delete(object);
+	public void delete(@RequestBody Modile object) {
+		modileService.delete(object);
 	}
+
 	@PostMapping(value = "/update")
-	public PvExamen update(@RequestBody PvExamen p) {
-		return pvExamenService.save(p);
+	public Modile update(@RequestBody Modile p) {
+		return modileService.save(p);
 	}
+
 	@DeleteMapping(value = "/{id}")
-	public void delete(@PathParam(value = "id")int id) {
-		pvExamenService.delete(id);
+	public void delete(@PathParam(value = "id") int id) {
+		modileService.delete(id);
 	}
 }

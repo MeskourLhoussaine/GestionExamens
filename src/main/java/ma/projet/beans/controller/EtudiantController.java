@@ -19,17 +19,14 @@ public class EtudiantController {
     }
     @PostMapping(value = "/update")
     public Etudiant update(@RequestBody Etudiant p) {
-        return etudiantService.update(p);
+        return etudiantService.save(p);
     }
-    @GetMapping(value = "/{id}")
+    @DeleteMapping(value = "/{id}")
     public void delete(@PathParam(value = "id")int id) {
         etudiantService.delete(id);
     }
 
-    @DeleteMapping(value = "/delete")
-    public void delete(Etudiant object) {
-        etudiantService.delete(object);
-    }
+
     @GetMapping(value = "/{id}")
     public Etudiant findById(@PathParam(value = "id")int id) {
         return etudiantService.findById(id);
@@ -38,5 +35,9 @@ public class EtudiantController {
     public List<Etudiant> findAll() {
         return etudiantService.findAll();
     }
+    @DeleteMapping(value = "/delete")
+	public void delete(@RequestBody Etudiant object) {
+		etudiantService.delete(object);
+	}
 
 }
