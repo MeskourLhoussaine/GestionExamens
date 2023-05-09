@@ -16,15 +16,15 @@ import lombok.Setter;
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-private int id;
-	@Column(nullable = false,unique = true, length = 30)
-private String email;
+	private int id;
 	@Column(nullable = false, length = 25)
-private String password;
+	private String nom;
 	@Column(nullable = false, length = 25)
-private String nom;
+	private String prenom;
+	@Column(nullable = false, unique = true, length = 30)
+	private String email;
 	@Column(nullable = false, length = 25)
-private String prenom;
+	private String password;
 	@ManyToOne
 	@JsonIgnore
 	private Admin admin;
