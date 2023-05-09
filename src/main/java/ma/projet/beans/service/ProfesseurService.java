@@ -37,12 +37,13 @@ public class ProfesseurService implements IProfesseur {
 	@Override
 	public Professeur update(Professeur p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.professeurRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
+		this.professeurRepository.deleteById(id);
 		
 	}
 }

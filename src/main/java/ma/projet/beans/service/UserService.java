@@ -48,7 +48,7 @@ public class UserService implements IUser{
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		this.userRepository.deleteById(id);
 		
 	}
 

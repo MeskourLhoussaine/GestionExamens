@@ -20,11 +20,11 @@ public class UserController {
 	}
 
 	@DeleteMapping(value = "/delete")
-	public void delete(@RequestBody User object) {
+	public void delete( User object) {
 		userService.delete(object);
 	}
 
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/findById")
 	public User findById(@PathParam(value = "id") int id) {
 		return userService.findById(id);
 	}
@@ -35,11 +35,11 @@ public class UserController {
 	}
 
 	@PostMapping(value =  "/update" )
-	public User update(User p) {
+	public User update(@RequestBody User p) {
 		return userService.update(p);
 	}
-
-	@DeleteMapping(value = "/{id}")
+	
+	@DeleteMapping(value = "/deletby")
 	public void delete(@PathParam(value = "id") int id) {
 		userService.delete(id);
 	}

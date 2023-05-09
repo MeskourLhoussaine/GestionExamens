@@ -29,7 +29,7 @@ public class AdminController {
 		adminService.delete(object);
 	}
 
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/findById")
 	public Admin findById(@PathParam(value = "id") int id) {
 		return adminService.findById(id);
 	}
@@ -39,7 +39,7 @@ public class AdminController {
 		return adminService.findAll();
 	}
 
-	@DeleteMapping(value = "/{id}")
+	@DeleteMapping(value = "/deletBy")
 	public void delete(@PathParam(value = "id") int id) {
 		adminService.delete(id);
 	}

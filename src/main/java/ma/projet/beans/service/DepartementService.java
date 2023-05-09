@@ -44,13 +44,13 @@ public class DepartementService implements IDepartement{
 
 	@Override
 	public Departement update(Departement p) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return this.departementRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		this.departementRepository.deleteById(id);
 		
 	}
 

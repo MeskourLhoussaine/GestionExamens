@@ -38,12 +38,12 @@ private ExamenRepository examenRepository;
 	@Override
 	public Examen update(Examen p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.examenRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		this.examenRepository.deleteById(id);
 		
 	}
 }

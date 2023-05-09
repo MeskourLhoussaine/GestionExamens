@@ -44,12 +44,12 @@ public class EtudiantService implements IEtudiant {
 	@Override
 	public Etudiant update(Etudiant p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.etudiantRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		this.etudiantRepository.deleteById(id);
 		
 	}
 

@@ -43,13 +43,13 @@ public class PvExamenService implements IPvExamen{
 	@Override
 	public PvExamen update(PvExamen p) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.pvExamenRepository.save(p);
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
+		this.pvExamenRepository.deleteById(id);
 	}
 	
 
