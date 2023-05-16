@@ -20,14 +20,14 @@ import java.util.List;
 public class SurveillantController {
 	private SurveillantService surveillantService;
 
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/findById")
 	public Surveillant findById(@PathParam(value = "id") int id) {
 		return surveillantService.findById(id);
 	}
 
 	@GetMapping(value = "/")
 	public List<Surveillant> findAll() {
-		return surveillantService.findAll();
+		return this.surveillantService.findAll();
 	}
 	@PostMapping(value = "/save")
 	public Surveillant save(@RequestBody Surveillant object) {
@@ -43,7 +43,7 @@ public class SurveillantController {
 		return surveillantService.save(p);
 	}
 	
-	@DeleteMapping(value = "/{id}")
+	@DeleteMapping(value = "/deletByid")
 	public void delete(@PathParam(value = "id")int id) {
 		surveillantService.delete(id);
 	}

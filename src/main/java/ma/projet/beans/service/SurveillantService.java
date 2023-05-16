@@ -17,31 +17,31 @@ public class SurveillantService implements ISurveillant {
 	@Override
 	public Surveillant save(Surveillant object) {
 		// TODO Auto-generated method stub
-		return surveillantRepository.save(object);
+		return this.surveillantRepository.save(object);
 	}
 
 	@Override
 	public void delete(Surveillant object) {
 		// TODO Auto-generated method stub
-		surveillantRepository.delete(object);
+		this.surveillantRepository.delete(object);
 	}
 
 	@Override
 	public Surveillant findById(int id) {
 		// TODO Auto-generated method stub
-		return surveillantRepository.findById(id);
+		return this.surveillantRepository.findById(id);
 	}
 
 	@Override
 	public List<Surveillant> findAll() {
 		// TODO Auto-generated method stub
-		return surveillantRepository.findAll();
+		return this.surveillantRepository.findAll();
 	}
 
 	@Override
 	public Surveillant update(Surveillant p) {
 		// TODO Auto-generated method stub
-		return this.surveillantRepository.save(null);
+		return this.surveillantRepository.save(p);
 	}
 
 	@Override

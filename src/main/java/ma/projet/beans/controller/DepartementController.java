@@ -20,7 +20,7 @@ import java.util.List;
 public class DepartementController {
 	private DepartementService departementService;
 
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/findById")
 	public Departement findById(@PathParam(value = "id") int id) {
 		return departementService.findById(id);
 	}
@@ -41,7 +41,7 @@ public class DepartementController {
 	public Departement update(@RequestBody  Departement p) {
 		return departementService.save(p);
 	}
-	   @DeleteMapping(value = "/{id}")
+	   @DeleteMapping(value = "/deletById")
 	public void delete(@PathParam(value = "id")int id) {
 		departementService.delete(id);
 	}

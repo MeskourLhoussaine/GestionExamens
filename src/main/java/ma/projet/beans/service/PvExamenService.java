@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import ma.projet.beans.entities.Etudiant;
 import ma.projet.beans.entities.PvExamen;
 import ma.projet.beans.iservice.IPvExamen;
 import ma.projet.beans.repository.PvExamenRepository;
@@ -51,8 +52,9 @@ public class PvExamenService implements IPvExamen{
 		// TODO Auto-generated method stub
 		this.pvExamenRepository.deleteById(id);
 	}
-	
 
+	
+	
 	
 
 }

@@ -20,7 +20,7 @@ import java.util.List;
 public class ExamenController {
 	private ExamenService examenService;
 
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/findById")
 	public Examen findById(@PathParam(value = "id") int id) {
 		return examenService.findById(id);
 	}
@@ -41,7 +41,7 @@ public class ExamenController {
 	public Examen update(@RequestBody  Examen p) {
 		return examenService.save(p);
 	}
-	 @DeleteMapping(value = "/{id}")
+	 @DeleteMapping(value = "/deletById")
 	public void delete(@PathParam(value = "id")int id) {
 		examenService.delete(id);
 	}

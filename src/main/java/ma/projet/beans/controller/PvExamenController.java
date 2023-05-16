@@ -2,6 +2,7 @@ package ma.projet.beans.controller;
 
 import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
+import ma.projet.beans.entities.Etudiant;
 import ma.projet.beans.entities.PvExamen;
 import ma.projet.beans.service.PvExamenService;
 
@@ -20,7 +21,7 @@ import java.util.List;
 public class PvExamenController {
 	private PvExamenService pvExamenService;
 
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/findById")
 	public PvExamen findById(@PathParam(value = "id") int id) {
 		return pvExamenService.findById(id);
 	}
@@ -41,8 +42,9 @@ public class PvExamenController {
 	public PvExamen update(@RequestBody PvExamen p) {
 		return pvExamenService.save(p);
 	}
-	@DeleteMapping(value = "/{id}")
+	@DeleteMapping(value = "/deletById")
 	public void delete(@PathParam(value = "id")int id) {
 		pvExamenService.delete(id);
 	}
+	
 }

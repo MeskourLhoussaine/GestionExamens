@@ -20,7 +20,7 @@ import java.util.List;
 public class SemesterController {
 	private SemesterService semesterService;
 
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/findById")
 	public Semester findById(@PathParam(value = "id") int id) {
 		return semesterService.findById(id);
 	}
@@ -45,7 +45,7 @@ public class SemesterController {
 		return semesterService.save(p);
 	}
 
-	@DeleteMapping(value = "/{id}")
+	@DeleteMapping(value = "/deletByid")
 	public void delete(@PathParam(value = "id") int id) {
 		semesterService.delete(id);
 	}

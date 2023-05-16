@@ -25,7 +25,7 @@ public class MatierController {
 		return matierService.findAll();
 	}
 
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/findById")
 	public Matiere findById(@PathParam(value = "id") int id) {
 		return matierService.findById(id);
 	}
@@ -45,7 +45,7 @@ public class MatierController {
 		return matierService.update(p);
 	}
 
-	@DeleteMapping(value = "/{id}")
+	@DeleteMapping(value = "/deletById")
 	public void delete(@PathParam(value = "id") int id) {
 		matierService.delete(id);
 	}

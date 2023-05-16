@@ -19,10 +19,10 @@ public class PasserExamen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIME)
     @Column(nullable = false)
     private Date dateDebut;
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIME)
     @Column(nullable = false)
     private Date dateFin;
     @ManyToOne

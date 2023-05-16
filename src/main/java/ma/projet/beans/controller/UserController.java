@@ -39,7 +39,7 @@ public class UserController {
 		return userService.update(p);
 	}
 	
-	@DeleteMapping(value = "/deletby")
+	@DeleteMapping(value = "/deletbyId")
 	public void delete(@PathParam(value = "id") int id) {
 		userService.delete(id);
 	}

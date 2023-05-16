@@ -41,7 +41,7 @@ public class ProfesseurController {
 	public Professeur update(@RequestBody Professeur p) {
 		return professeurService.save(p);
 	}
-	@DeleteMapping(value = "/{id}")
+	@DeleteMapping(value = "/deletById")
 	public void delete(@PathParam(value = "id") int id) {
 		professeurService.delete(id);
 	}

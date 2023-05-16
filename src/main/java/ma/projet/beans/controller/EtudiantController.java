@@ -21,13 +21,13 @@ public class EtudiantController {
     public Etudiant update(@RequestBody Etudiant p) {
         return etudiantService.save(p);
     }
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "/deleteById")
     public void delete(@PathParam(value = "id")int id) {
         etudiantService.delete(id);
     }
 
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/findById")
     public Etudiant findById(@PathParam(value = "id")int id) {
         return etudiantService.findById(id);
     }
