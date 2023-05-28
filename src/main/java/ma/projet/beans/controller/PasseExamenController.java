@@ -7,6 +7,7 @@ import ma.projet.beans.entities.Examen;
 import ma.projet.beans.entities.PasserExamen;
 import ma.projet.beans.service.PasseExamenService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,8 +19,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/passeExamens")
-@AllArgsConstructor
+
 public class PasseExamenController {
+	@Autowired
     private PasseExamenService passeExamenService;
 
 

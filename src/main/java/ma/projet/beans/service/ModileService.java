@@ -4,6 +4,8 @@ import java.util.List;
 
 import ma.projet.beans.entities.Modile;
 import ma.projet.beans.repository.ModileRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -12,11 +14,10 @@ import lombok.NoArgsConstructor;
 import ma.projet.beans.iservice.IModule;
 
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class ModileService implements IModule {
+	@Autowired
 
 	private ModileRepository modileRepository;
 

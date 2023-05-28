@@ -2,22 +2,22 @@ package ma.projet.beans.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+
 import ma.projet.beans.entities.Filiere;
 import ma.projet.beans.iservice.IFiliere;
 import ma.projet.beans.repository.FilierRepository;
-@Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
 
+@Service
 
 public class FilierService implements IFiliere {
-   private FilierRepository filierRepository;
+	@Autowired
+	private FilierRepository filierRepository;
+
 	@Override
 	public Filiere save(Filiere object) {
 		// TODO Auto-generated method stub
@@ -52,7 +52,7 @@ public class FilierService implements IFiliere {
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		this.filierRepository.deleteById(id);
-		
+
 	}
 
 }

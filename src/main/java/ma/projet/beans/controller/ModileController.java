@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Modile;
 import ma.projet.beans.service.ModileService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,8 +17,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/modiles")
-@AllArgsConstructor
+
 public class ModileController {
+	@Autowired
 	private ModileService modileService;
 
 	@GetMapping(value = "/{id}")

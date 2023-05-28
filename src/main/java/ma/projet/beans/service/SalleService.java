@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -11,11 +12,10 @@ import ma.projet.beans.entities.Salle;
 import ma.projet.beans.iservice.ISalle;
 import ma.projet.beans.repository.SalleRepository;
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class SalleService  implements ISalle{
+	@Autowired
     private SalleRepository salleRepository;
 	@Override
 	public Salle save(Salle object) {

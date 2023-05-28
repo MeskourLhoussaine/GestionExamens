@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Semester;
 import ma.projet.beans.service.SemesterService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,8 +17,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/semesteres")
-@AllArgsConstructor
+
 public class SemesterController {
+	@Autowired
 	private SemesterService semesterService;
 
 	@GetMapping(value = "/{id}")

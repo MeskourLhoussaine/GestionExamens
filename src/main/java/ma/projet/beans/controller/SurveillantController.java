@@ -19,11 +19,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/surveillans")
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class SurveillantController {
-	
+	@Autowired
 	private SurveillantService surveillantService;
 
 	@GetMapping(value = "/{id}")

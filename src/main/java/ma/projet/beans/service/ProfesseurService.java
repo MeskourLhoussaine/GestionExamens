@@ -6,16 +6,17 @@ import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Professeur;
 import ma.projet.beans.iservice.IProfesseur;
 import ma.projet.beans.repository.ProfesseurRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class ProfesseurService implements IProfesseur {
+	@Autowired
     private ProfesseurRepository professeurRepository;
     @Override
     public Professeur save(Professeur object) {

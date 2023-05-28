@@ -4,14 +4,17 @@ import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Admin;
 import ma.projet.beans.service.AdminService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("api/admine")
-@AllArgsConstructor
+
 public class AdminController {
+	@Autowired
 	private AdminService adminService;
 
 	@PostMapping(value = "/save")

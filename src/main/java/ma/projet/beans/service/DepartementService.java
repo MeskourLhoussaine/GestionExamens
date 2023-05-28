@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -13,13 +14,10 @@ import ma.projet.beans.iservice.IDepartement;
 import ma.projet.beans.repository.DepartementRepository;
 
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
 
 
 public class DepartementService implements IDepartement{
-	
+	@Autowired
     private DepartementRepository departementRepository;
 	@Override
 	public Departement save(Departement object) {

@@ -1,22 +1,22 @@
 package ma.projet.beans.service;
 
-import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+
 import ma.projet.beans.entities.Examen;
 import ma.projet.beans.iservice.IExamen;
 import ma.projet.beans.repository.ExamenRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class ExamenService implements IExamen {
+	
+	@Autowired
 private ExamenRepository examenRepository;
     @Override
     public Examen save(Examen object) {

@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Matiere;
 import ma.projet.beans.service.MatierService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,8 +17,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/matieres")
-@AllArgsConstructor
+
 public class MatierController {
+	@Autowired
 	private MatierService matierService;
 
 	@GetMapping(value = "/")

@@ -2,16 +2,21 @@ package ma.projet.beans.controller;
 
 import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.User;
 import ma.projet.beans.service.UserService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("api/users")
-@AllArgsConstructor
+
+
 public class UserController {
+	@Autowired
 	private UserService userService;
 
 	@PostMapping(value = { "/save" })

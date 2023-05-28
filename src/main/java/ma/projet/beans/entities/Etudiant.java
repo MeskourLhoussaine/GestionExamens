@@ -30,13 +30,13 @@ public class Etudiant extends User{
 	@Column(nullable = false)
 	private Date date;
 	@ManyToOne
-	@JsonIgnore
+	
 	private Filiere filiere;
 	@ManyToOne
-	@JsonIgnore
+	
 	private Fraude fraude;
 	@OneToMany(mappedBy = "etudiant")
-	@JsonIgnore
+	
 	private List<PvExamen>pvExamen;
 
 

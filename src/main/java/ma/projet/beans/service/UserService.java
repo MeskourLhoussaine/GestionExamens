@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -12,12 +13,11 @@ import ma.projet.beans.iservice.IUser;
 import ma.projet.beans.repository.UserRepository;
 
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 
 public class UserService implements IUser{
+	@Autowired
      private UserRepository userRepository;
 	@Override
 	public User save(User object) {

@@ -3,6 +3,8 @@ package ma.projet.beans.service;
 import java.util.List;
 
 import ma.projet.beans.entities.Examen;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -13,11 +15,10 @@ import ma.projet.beans.iservice.IPasserExamen;
 import ma.projet.beans.repository.PasserExamenRepository;
 
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class PasseExamenService implements IPasserExamen {
+	@Autowired
     private PasserExamenRepository passerExamenRepository;
 	@Override
 	public PasserExamen save(PasserExamen object) {

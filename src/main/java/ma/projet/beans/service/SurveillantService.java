@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -12,11 +13,10 @@ import ma.projet.beans.entities.Surveillant;
 import ma.projet.beans.iservice.ISurveillant;
 import ma.projet.beans.repository.SurveillantRepository;
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class SurveillantService implements ISurveillant {
+	@Autowired
    private SurveillantRepository surveillantRepository;
 	@Override
 	public Surveillant save(Surveillant object) {

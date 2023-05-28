@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -12,11 +13,10 @@ import ma.projet.beans.entities.PvExamen;
 import ma.projet.beans.iservice.IPvExamen;
 import ma.projet.beans.repository.PvExamenRepository;
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class PvExamenService implements IPvExamen{
+	@Autowired
      
 	private PvExamenRepository pvExamenRepository;
 

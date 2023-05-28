@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -11,11 +12,9 @@ import ma.projet.beans.entities.Semester;
 import ma.projet.beans.iservice.ISemester;
 import ma.projet.beans.repository.SemesterRepository;
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
 
 public class SemesterService implements ISemester {
+	@Autowired
    private SemesterRepository semesterRepository;
 	@Override
 	public Semester save(Semester object) {

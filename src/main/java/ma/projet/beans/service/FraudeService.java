@@ -8,14 +8,15 @@ import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Fraude;
 import ma.projet.beans.iservice.IFraud;
 import ma.projet.beans.repository.FraudeRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-@Transactional
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class FraudeService implements IFraud{
+	@Autowired
     private FraudeRepository fraudeRepository;
 	@Override
 	public Fraude save(Fraude object) {

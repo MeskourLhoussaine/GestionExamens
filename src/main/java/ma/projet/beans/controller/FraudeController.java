@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Fraude;
 import ma.projet.beans.service.FraudeService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,8 +17,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/fraudes")
-@AllArgsConstructor
+
 public class FraudeController {
+	@Autowired
 	private FraudeService fraudeService;
 
 	@GetMapping(value = "/{id}")

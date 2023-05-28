@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import ma.projet.beans.entities.Salle;
 import ma.projet.beans.service.SalleService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,8 +17,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/salles")
-@AllArgsConstructor
+
 public class SalleController {
+	@Autowired
     private SalleService  salleService;
     @GetMapping(value = "/{id}")
     public Salle findById(@PathParam(value = "id")int id) {
