@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Professeur;
 import ma.projet.beans.iservice.IProfesseur;
 import ma.projet.beans.repository.ProfesseurRepository;
@@ -12,6 +13,8 @@ import java.util.List;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class ProfesseurService implements IProfesseur {
     private ProfesseurRepository professeurRepository;
     @Override

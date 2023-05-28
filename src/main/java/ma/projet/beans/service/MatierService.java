@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Matiere;
 import ma.projet.beans.iservice.IMatiere;
 import ma.projet.beans.repository.MatiereRepository;
@@ -14,6 +15,9 @@ import ma.projet.beans.repository.MatiereRepository;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
+
 public class MatierService implements IMatiere {
    private MatiereRepository matiereRepository;
 	@Override

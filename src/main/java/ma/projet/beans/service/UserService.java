@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.User;
 import ma.projet.beans.iservice.IUser;
 import ma.projet.beans.repository.UserRepository;
@@ -13,6 +14,8 @@ import ma.projet.beans.repository.UserRepository;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 
 public class UserService implements IUser{
      private UserRepository userRepository;

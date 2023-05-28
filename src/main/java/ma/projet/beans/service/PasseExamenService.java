@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.PasserExamen;
 import ma.projet.beans.iservice.IPasserExamen;
 import ma.projet.beans.repository.PasserExamenRepository;
@@ -14,6 +15,8 @@ import ma.projet.beans.repository.PasserExamenRepository;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class PasseExamenService implements IPasserExamen {
     private PasserExamenRepository passerExamenRepository;
 	@Override

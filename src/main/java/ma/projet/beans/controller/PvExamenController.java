@@ -21,7 +21,7 @@ import java.util.List;
 public class PvExamenController {
 	private PvExamenService pvExamenService;
 
-	@GetMapping(value = "/findById")
+	@GetMapping(value = "/{id}")
 	public PvExamen findById(@PathParam(value = "id") int id) {
 		return pvExamenService.findById(id);
 	}
@@ -42,7 +42,7 @@ public class PvExamenController {
 	public PvExamen update(@RequestBody PvExamen p) {
 		return pvExamenService.save(p);
 	}
-	@DeleteMapping(value = "/deletById")
+	@DeleteMapping(value = "/{id}")
 	public void delete(@PathParam(value = "id")int id) {
 		pvExamenService.delete(id);
 	}

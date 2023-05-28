@@ -27,7 +27,7 @@ public class PasseExamenController {
     public List<PasserExamen> findAll() {
         return passeExamenService.findAll();
     }
-    @GetMapping(value = "/findById")
+    @GetMapping(value = "/{id}")
     public PasserExamen findById(@PathParam(value = "id")int id) {
         return passeExamenService.findById(id);
     }
@@ -48,7 +48,7 @@ public class PasseExamenController {
 	public PasserExamen update( @RequestBody PasserExamen p) {
 		return passeExamenService.save(p);
 	}
-	@DeleteMapping(value = "/deleteById")
+	@DeleteMapping(value = "/{id}")
 	public void delete(@PathParam(value = "id") int id) {
 		passeExamenService.delete(id);
 	}

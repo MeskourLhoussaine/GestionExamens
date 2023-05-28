@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Admin;
 import ma.projet.beans.iservice.IAdmin;
 import ma.projet.beans.repository.AdminRepository;
@@ -12,6 +13,8 @@ import java.util.List;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class AdminService implements IAdmin {
     private AdminRepository adminRepository;
     @Override

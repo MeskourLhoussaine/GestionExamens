@@ -27,4 +27,7 @@ public class Filiere {
     @OneToMany(mappedBy = "filiere")
     @JsonIgnore
     private List<Etudiant> etudiants;
+    @ManyToOne
+    @JsonIgnore
+    private Departement departement;
 }

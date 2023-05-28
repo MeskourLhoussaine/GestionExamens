@@ -6,12 +6,15 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Semester;
 import ma.projet.beans.iservice.ISemester;
 import ma.projet.beans.repository.SemesterRepository;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class SemesterService implements ISemester {
    private SemesterRepository semesterRepository;
 	@Override

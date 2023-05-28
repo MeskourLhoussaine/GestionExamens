@@ -2,6 +2,7 @@ package ma.projet.beans.service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Examen;
 import ma.projet.beans.iservice.IExamen;
 import ma.projet.beans.repository.ExamenRepository;
@@ -13,6 +14,8 @@ import java.util.List;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class ExamenService implements IExamen {
 private ExamenRepository examenRepository;
     @Override

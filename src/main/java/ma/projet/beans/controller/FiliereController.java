@@ -20,7 +20,7 @@ import java.util.List;
 public class FiliereController {
 	private FilierService filierService;
 
-	@GetMapping(value = "/findById")
+	@GetMapping(value = "/{id}")
 	public Filiere findById(@PathParam(value = "id") int id) {
 		return filierService.findById(id);
 	}
@@ -41,7 +41,7 @@ public class FiliereController {
 	public Filiere update(@RequestBody  Filiere p) {
 		return filierService.save(p);
 	}
-	 @DeleteMapping(value = "/deletById")
+	 @DeleteMapping(value = "/{id}")
 	public void delete(int id) {
 		filierService.delete(id);
 	}

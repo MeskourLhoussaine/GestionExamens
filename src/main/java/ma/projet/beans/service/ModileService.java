@@ -8,11 +8,14 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.iservice.IModule;
 
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class ModileService implements IModule {
 
 	private ModileRepository modileRepository;

@@ -6,12 +6,16 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import ma.projet.beans.entities.Etudiant;
 import ma.projet.beans.entities.Surveillant;
 import ma.projet.beans.iservice.ISurveillant;
 import ma.projet.beans.repository.SurveillantRepository;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class SurveillantService implements ISurveillant {
    private SurveillantRepository surveillantRepository;
 	@Override
@@ -50,5 +54,6 @@ public class SurveillantService implements ISurveillant {
 		this.surveillantRepository.deleteById(id);
 		
 	}
+
 
 }

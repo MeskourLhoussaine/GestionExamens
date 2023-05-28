@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Departement;
 import ma.projet.beans.iservice.IDepartement;
 
@@ -14,6 +15,8 @@ import ma.projet.beans.repository.DepartementRepository;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 
 public class DepartementService implements IDepartement{
 	

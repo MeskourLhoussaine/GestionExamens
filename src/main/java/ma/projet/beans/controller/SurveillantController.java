@@ -2,9 +2,12 @@ package ma.projet.beans.controller;
 
 import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import ma.projet.beans.entities.Etudiant;
 import ma.projet.beans.entities.Surveillant;
 import ma.projet.beans.service.SurveillantService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,10 +20,13 @@ import java.util.List;
 @RestController
 @RequestMapping("api/surveillans")
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class SurveillantController {
+	
 	private SurveillantService surveillantService;
 
-	@GetMapping(value = "/findById")
+	@GetMapping(value = "/{id}")
 	public Surveillant findById(@PathParam(value = "id") int id) {
 		return surveillantService.findById(id);
 	}
@@ -43,8 +49,10 @@ public class SurveillantController {
 		return surveillantService.save(p);
 	}
 	
-	@DeleteMapping(value = "/deletByid")
+	@DeleteMapping(value = "/{id}")
 	public void delete(@PathParam(value = "id")int id) {
 		surveillantService.delete(id);
 	}
+	
+	
 }

@@ -20,7 +20,7 @@ import java.util.List;
 public class FraudeController {
 	private FraudeService fraudeService;
 
-	@GetMapping(value = "/findById")
+	@GetMapping(value = "/{id}")
 	public Fraude findById(@PathParam(value = "id") int id) {
 		return fraudeService.findById(id);
 	}
@@ -41,7 +41,7 @@ public class FraudeController {
 	public Fraude update(@RequestBody Fraude p) {
 		return fraudeService.save(p);
 	}
-	 @DeleteMapping(value = "/deletById")
+	 @DeleteMapping(value = "/{id}")
 	public void delete(@PathParam(value = "id")int id) {
 		fraudeService.delete(id);
 	}

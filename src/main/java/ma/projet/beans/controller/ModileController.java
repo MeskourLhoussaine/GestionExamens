@@ -20,7 +20,7 @@ import java.util.List;
 public class ModileController {
 	private ModileService modileService;
 
-	@GetMapping(value = "/findById")
+	@GetMapping(value = "/{id}")
 	public Modile findById(@PathParam(value = "id") int id) {
 		return modileService.findById(id);
 	}
@@ -45,7 +45,7 @@ public class ModileController {
 		return modileService.save(p);
 	}
 
-	@DeleteMapping(value = "/deleteById")
+	@DeleteMapping(value = "/{id}")
 	public void delete(@PathParam(value = "id") int id) {
 		modileService.delete(id);
 	}

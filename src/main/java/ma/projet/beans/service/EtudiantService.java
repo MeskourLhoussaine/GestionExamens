@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Etudiant;
 import ma.projet.beans.iservice.IEtudiant;
 import ma.projet.beans.repository.EtudiantRepository;
@@ -13,6 +14,8 @@ import ma.projet.beans.repository.EtudiantRepository;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class EtudiantService implements IEtudiant {
 
 	private EtudiantRepository etudiantRepository; 

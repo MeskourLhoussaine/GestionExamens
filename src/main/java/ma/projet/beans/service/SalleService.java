@@ -6,12 +6,15 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Salle;
 import ma.projet.beans.iservice.ISalle;
 import ma.projet.beans.repository.SalleRepository;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class SalleService  implements ISalle{
     private SalleRepository salleRepository;
 	@Override

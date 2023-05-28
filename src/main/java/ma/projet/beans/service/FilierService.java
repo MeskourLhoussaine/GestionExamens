@@ -6,12 +6,16 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import ma.projet.beans.entities.Filiere;
 import ma.projet.beans.iservice.IFiliere;
 import ma.projet.beans.repository.FilierRepository;
 @Service
 @Transactional
 @AllArgsConstructor
+@NoArgsConstructor
+
+
 public class FilierService implements IFiliere {
    private FilierRepository filierRepository;
 	@Override
