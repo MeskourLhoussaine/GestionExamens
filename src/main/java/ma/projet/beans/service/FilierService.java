@@ -5,8 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
+
 
 import ma.projet.beans.entities.Filiere;
 import ma.projet.beans.iservice.IFiliere;
